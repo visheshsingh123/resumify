@@ -1595,8 +1595,8 @@
   </div>
   <div class="topbar-actions">
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle night mode">🌙</button>
-    <button class="btn btn-outline" onclick="window.print()">🖨 Print</button>
-    <button class="btn btn-primary" onclick="downloadResume()">⬇ Download PDF</button>
+    <button class="btn btn-outline" onclick="window.print()">🖨 Download</button>
+   
   </div>
 </div>
 
@@ -1604,14 +1604,14 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="sidebar-tabs">
-      <div class="sidebar-tab active" onclick="switchTab('details')">Details</div>
+      <div class="sidebar-tab active" onclick="switchTab('design')">Design</div>
+      <div class="sidebar-tab" onclick="switchTab('details')">Details</div>
       <div class="sidebar-tab" onclick="switchTab('experience')">Experience</div>
       <div class="sidebar-tab" onclick="switchTab('education')">Education</div>
-      <div class="sidebar-tab" onclick="switchTab('design')">Design</div>
     </div>
 
     <!-- DETAILS TAB -->
-    <div class="tab-panel active" id="tab-details">
+    <div class="tab-panel " id="tab-details">
       <div class="form-section">
         <div class="form-section-title">Photo</div>
         <div class="photo-upload-area" id="uploadArea">
@@ -1693,7 +1693,7 @@
     </div>
 
     <!-- DESIGN TAB -->
-    <div class="tab-panel" id="tab-design">
+    <div class="tab-panel active" id="tab-design">
       <div style="padding: 0.5rem 0 1rem; font-size: 0.82rem; color: var(--muted);">Choose a template for your resume</div>
       <div class="presets-grid" id="presetsGrid" style="grid-template-columns:1fr 1fr;">
         <!-- Row 1: original 4 -->
