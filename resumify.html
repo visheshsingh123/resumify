@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resumify</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a2e'/%3E%3Crect x='8' y='7' width='16' height='2' rx='1' fill='%23e8a87c'/%3E%3Crect x='8' y='12' width='12' height='1.5' rx='0.75' fill='rgba(255,255,255,0.5)'/%3E%3Crect x='8' y='16' width='14' height='1.5' rx='0.75' fill='rgba(255,255,255,0.5)'/%3E%3Crect x='8' y='20' width='10' height='1.5' rx='0.75' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;700&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Syne:wght@400;700;800&family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -143,13 +144,15 @@
     height: 38px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.15s;
+    padding: 0;
+    flex-shrink: 0;
   }
-  .theme-toggle:hover { background: rgba(255,255,255,0.1); }
+  .theme-toggle svg { width: 16px; height: 16px; stroke: white; fill: none; flex-shrink: 0; }
+  .theme-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -532,7 +535,7 @@
     background: var(--preview-bg);
     transition: background 0.2s;
   }
-  .preview-pane > #resumeWrapper { margin-top: 1.25rem; }
+  .preview-pane > #resumeScaleBox { margin-top: 1.25rem; }
 
   .resume-paper {
     width: 700px;
@@ -1092,6 +1095,12 @@
     .topbar, .sidebar, .preview-toolbar, .app-footer { display: none !important; }
     html, body { margin: 0; padding: 0; background: white; }
     .workspace, .preview-pane { display: block; padding: 0; background: white; }
+    #resumeScaleBox {
+      display: block;
+      width: auto;
+      height: auto !important;
+      overflow: visible;
+    }
     #resumeWrapper {
       display: block;
       transform-origin: top left;
@@ -1106,11 +1115,25 @@
     }
   }
 
+  #resumeScaleBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   @media (max-width: 900px) {
     .workspace { flex-direction: column; }
     .sidebar { width: 100%; min-width: 100%; max-height: 50vh; }
-    .preview-pane { padding: 1rem; }
-    .resume-paper { width: 100%; transform-origin: top center; transform: scale(0.55); }
+    .preview-pane { padding: 1rem; align-items: flex-start; overflow-x: hidden; }
+    #resumeScaleBox {
+      width: 100%;
+      overflow: hidden;
+    }
+    #resumeWrapper {
+      width: 700px;
+      flex-shrink: 0;
+      transform-origin: top center;
+    }
   }
 
   /* ═══════════════════════════════════════
@@ -1590,11 +1613,14 @@
 
 <div class="topbar">
   <div class="topbar-left">
-    <a href="resumify-landing.html" class="topbar-brand">Resumi<span>fy</span></a>
+    <a href="index.html" class="topbar-brand">Resumi<span>fy</span></a>
     <div class="topbar-badge">100% client-side — nothing leaves your device</div>
   </div>
   <div class="topbar-actions">
-    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle night mode">🌙</button>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle night mode">
+      <svg id="builder-icon-moon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      <svg id="builder-icon-sun" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <button class="btn btn-outline" onclick="window.print()">🖨 Download</button>
    
   </div>
@@ -1911,8 +1937,10 @@
   <!-- PREVIEW -->
   <div class="preview-pane">
     <div class="preview-toolbar"><span class="dot"></span> Live preview · processed locally</div>
-    <div id="resumeWrapper">
-      <div class="resume-paper" id="resumePaper"></div>
+    <div id="resumeScaleBox">
+      <div id="resumeWrapper">
+        <div class="resume-paper" id="resumePaper"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -2149,7 +2177,39 @@ function renderResume() {
   else if (state.preset === 'forest')   renderForest(paper, photoHTML, contactItems, safeText);
   else if (state.preset === 'sunset')   renderSunset(paper, photoHTML, contactItems, safeText);
   else if (state.preset === 'paper')    renderPaper(paper, photoHTML, contactItems, safeText);
+
+  updatePreviewScale();
 }
+
+// ── Mobile preview scaling ──
+// On small screens the resume paper keeps its fixed design width (700px)
+// but is visually scaled down to fit the viewport, and the surrounding
+// box is resized to match so there's no leftover blank space.
+function updatePreviewScale() {
+  const scaleBox = document.getElementById('resumeScaleBox');
+  const wrapper = document.getElementById('resumeWrapper');
+  if (!scaleBox || !wrapper) return;
+
+  if (window.innerWidth > 900) {
+    wrapper.style.transform = '';
+    scaleBox.style.height = '';
+    return;
+  }
+
+  const paneWidth = scaleBox.clientWidth || window.innerWidth;
+  const naturalWidth = 700; // design width of .resume-paper
+  const scale = Math.min(paneWidth / naturalWidth, 1) * 0.98; // small margin
+
+  wrapper.style.transform = `scale(${scale})`;
+
+  // Wait a tick for layout to settle, then measure the scaled height
+  requestAnimationFrame(() => {
+    const naturalHeight = wrapper.offsetHeight;
+    scaleBox.style.height = (naturalHeight * scale) + 'px';
+  });
+}
+
+window.addEventListener('resize', updatePreviewScale);
 
 function expItems(st) {
   return st.experience.map(e => `
@@ -2571,9 +2631,16 @@ function downloadResume() {
 }
 
 // ── Theme ──
+function setBuilderIcon(isDark) {
+  const moon = document.getElementById('builder-icon-moon');
+  const sun  = document.getElementById('builder-icon-sun');
+  if (!moon || !sun) return;
+  moon.style.display = isDark ? 'none' : 'block';
+  sun.style.display  = isDark ? 'block' : 'none';
+}
 function toggleTheme() {
   const isDark = document.body.classList.toggle('dark-mode');
-  document.getElementById('themeToggle').textContent = isDark ? '☀️' : '🌙';
+  setBuilderIcon(isDark);
   try { localStorage.setItem('resumify-theme', isDark ? 'dark' : 'light'); } catch (e) {}
 }
 function initTheme() {
@@ -2581,7 +2648,7 @@ function initTheme() {
   try { saved = localStorage.getItem('resumify-theme'); } catch (e) {}
   if (saved === 'dark') {
     document.body.classList.add('dark-mode');
-    document.getElementById('themeToggle').textContent = '☀️';
+    setBuilderIcon(true);
   }
 }
 
@@ -2590,6 +2657,7 @@ addEntry('exp');
 addEntry('edu');
 renderResume();
 initTheme();
+window.addEventListener('load', updatePreviewScale);
 
 // ── Loader dismiss ──
 (function() {
