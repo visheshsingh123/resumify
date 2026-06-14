@@ -545,6 +545,10 @@
     position: relative;
     overflow: hidden;
   }
+  .resume-paper * {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 
   /* ═══════════════════════════════════
      PRESET 1: EXECUTIVE (dark sidebar)
@@ -1046,15 +1050,22 @@
     grid-template-columns: 4fr 3fr;
     gap: 1.25rem;
     align-items: start;
+    min-width: 0;
+  }
+  .r-bottom-grid > *,
+  .r-body > * {
+    min-width: 0;
+    overflow-wrap: break-word;
   }
   .preset-elegant .r-bottom-grid {
-    grid-template-columns: 4fr auto 3fr;
+    grid-template-columns: 4fr 32px 3fr;
     gap: 0;
   }
   .r-col-divider-wrap {
     display: flex;
     justify-content: center;
     padding: 0 1rem;
+    min-width: 32px;
   }
   .r-col-divider { width: 1px; background: #d4c5a9; align-self: stretch; }
 
@@ -1492,30 +1503,36 @@
   }
   .preset-sunset .r-bg-diagonal {
     position: absolute; top: 0; left: 0;
-    width: 50%; height: 260px;
+    width: 200px; height: 150px;
     background: linear-gradient(180deg, #7c3aed, #db2777);
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 55% 100%, 0 100%);
     z-index: 0;
   }
   .preset-sunset .r-header {
     position: relative; z-index: 1;
     padding: 2rem 2.5rem;
     display: flex; align-items: flex-start; gap: 1.5rem;
-    min-height: 180px;
+    min-height: 150px;
   }
   .preset-sunset .r-photo {
     width: 90px; height: 90px; border-radius: 50%;
     object-fit: cover; border: 3px solid white; flex-shrink: 0; margin-top: 10px;
+    position: relative; z-index: 2;
   }
   .preset-sunset .r-photo-placeholder {
     width: 90px; height: 90px; border-radius: 50%;
-    background: rgba(255,255,255,0.2); border: 3px solid white;
+    background: rgba(255,255,255,0.25); border: 3px solid white;
     display: flex; align-items: center; justify-content: center;
     font-size: 2.5rem; flex-shrink: 0; margin-top: 10px;
+    position: relative; z-index: 2;
   }
-  .preset-sunset .r-name { font-size: 2rem; font-weight: 700; color: white; line-height: 1.1; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
-  .preset-sunset .r-title { font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px; }
-  .preset-sunset .r-contact-row { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px; font-size: 0.72rem; color: rgba(255,255,255,0.75); }
+  .preset-sunset .r-header > div {
+    position: relative; z-index: 2;
+    padding-top: 10px;
+  }
+  .preset-sunset .r-name { font-size: 2rem; font-weight: 700; color: #1f2937; line-height: 1.1; }
+  .preset-sunset .r-title { font-size: 0.8rem; color: #7c3aed; font-weight: 500; margin-top: 4px; }
+  .preset-sunset .r-contact-row { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px; font-size: 0.72rem; color: #6b7280; }
   .preset-sunset .r-body { padding: 0.5rem 2.5rem 2rem; display: grid; grid-template-columns: 4fr 3fr; gap: 2rem; align-items: start; }
   .preset-sunset .r-sec-label {
     font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
@@ -2302,7 +2319,7 @@ function renderExecutive(paper, photo, contacts, s) {
     </div>
     <div class="r-main">
       ${state.summary ? `<div><div class="r-main-sec-label">Profile</div><div class="r-summary">${s(state.summary)}</div></div>` : ''}
-      ${hasBottom ? `<div class="r-bottom-grid">${leftBottom}<div>${rightBottom}</div></div>` : ''}
+      ${hasBottom ? `<div class="r-bottom-grid"><div>${leftBottom}</div><div>${rightBottom}</div></div>` : ''}
     </div>`;
 }
 
@@ -2328,7 +2345,7 @@ function renderMinimal(paper, photo, contacts, s) {
       </div>
     </div>
     ${state.summary ? `<div class="r-summary" style="margin-bottom:1rem;font-size:0.82rem;line-height:1.7;color:#374151;">${s(state.summary)}</div>` : ''}
-    <div class="r-bottom-grid">${leftBottom}<div>${rightBottom}</div></div>`;
+    <div class="r-bottom-grid"><div>${leftBottom}</div><div>${rightBottom}</div></div>`;
 }
 
 function renderCreative(paper, photo, contacts, s) {
@@ -2387,7 +2404,7 @@ function renderElegant(paper, photo, contacts, s) {
       <div class="r-contact-row">${contacts.join('')}</div>
     </div>
     ${state.summary ? `<div class="r-summary">${s(state.summary)}</div>` : ''}
-    <div class="r-bottom-grid">${leftBottom}<div class="r-col-divider-wrap"><div class="r-col-divider"></div></div><div>${rightBottom}</div></div>`;
+    <div class="r-bottom-grid"><div>${leftBottom}</div><div class="r-col-divider-wrap"><div class="r-col-divider"></div></div><div>${rightBottom}</div></div>`;
 }
 
 
