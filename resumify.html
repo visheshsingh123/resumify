@@ -2192,24 +2192,32 @@ function updatePreviewScale() {
 
   if (window.innerWidth > 900) {
     wrapper.style.transform = '';
+    wrapper.style.transformOrigin = '';
     scaleBox.style.height = '';
     return;
   }
 
+  // Reset height BEFORE measuring so a previous (smaller) value
+  // can't constrain clientWidth/offsetHeight on this pass.
+  scaleBox.style.height = 'auto';
+  wrapper.style.transform = 'none';
+
   const paneWidth = scaleBox.clientWidth || window.innerWidth;
   const naturalWidth = 700; // design width of .resume-paper
+  const naturalHeight = wrapper.offsetHeight;
   const scale = Math.min(paneWidth / naturalWidth, 1) * 0.98; // small margin
 
+  wrapper.style.transformOrigin = 'top center';
   wrapper.style.transform = `scale(${scale})`;
-
-  // Wait a tick for layout to settle, then measure the scaled height
-  requestAnimationFrame(() => {
-    const naturalHeight = wrapper.offsetHeight;
-    scaleBox.style.height = (naturalHeight * scale) + 'px';
-  });
+  scaleBox.style.height = (naturalHeight * scale) + 'px';
 }
 
-window.addEventListener('resize', updatePreviewScale);
+// Debounce resize handling to avoid layout thrashing
+let _scaleResizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(_scaleResizeTimer);
+  _scaleResizeTimer = setTimeout(updatePreviewScale, 100);
+});
 
 function expItems(st) {
   return st.experience.map(e => `
