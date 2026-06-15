@@ -106,6 +106,7 @@
     --sidebar-w: 340px;
     --app-bg: #f0ede6;
     --preview-bg: #e8e4de;
+    --badge-text: var(--sage-soft);
   }
 
   body.dark-mode {
@@ -117,6 +118,7 @@
     --muted: #9a9ab0;
     --ink-soft: #2a2a44;
     --sage-soft: rgba(91,138,114,0.18);
+    --badge-text: rgba(240,237,230,0.75);
   }
   body.dark-mode { color: #f0ede6; }
   body.dark-mode label { color: #d4d4e0; }
@@ -196,7 +198,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--sage-soft);
+    color: var(--badge-text);
     display: none;
     align-items: center;
     gap: 8px;
@@ -1610,6 +1612,572 @@
     padding: 2px 8px; border: 1px solid #c8a96a; color: #6b5a3e; margin: 2px 3px 0 0;
   }
 
+  /* ═══════════════════════════════════════
+     PRESET 13: ROYAL (purple / gold luxury)
+  ═══════════════════════════════════════ */
+  .preset-royal .resume-paper {
+    font-family: 'Cormorant Garamond', serif;
+    background: #fdfcfb;
+  }
+  .preset-royal .r-header {
+    background: linear-gradient(135deg, #2e1a47, #4a2c6e);
+    padding: 2.25rem 2.5rem;
+    color: white;
+    display: flex; align-items: center; gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .preset-royal .r-header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #c8a96a, #f0d9a8, #c8a96a);
+  }
+  .preset-royal .r-photo {
+    width: 95px; height: 95px; border-radius: 50%;
+    object-fit: cover; border: 3px solid #c8a96a; flex-shrink: 0;
+  }
+  .preset-royal .r-photo-placeholder {
+    width: 95px; height: 95px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); border: 3px solid #c8a96a;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem; flex-shrink: 0;
+  }
+  .preset-royal .r-name {
+    font-size: 2.4rem; font-weight: 600; color: white;
+    letter-spacing: 0.02em; line-height: 1.05;
+  }
+  .preset-royal .r-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem; color: #c8a96a; margin-top: 6px;
+    letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
+  }
+  .preset-royal .r-contact-row {
+    font-family: 'DM Sans', sans-serif;
+    display: flex; flex-wrap: wrap; gap: 4px 16px;
+    margin-top: 10px; font-size: 0.74rem; color: rgba(255,255,255,0.65);
+  }
+  .preset-royal .r-body {
+    display: grid; grid-template-columns: 4fr 3fr;
+    gap: 2rem; padding: 1.75rem 2.5rem; align-items: start;
+  }
+  .preset-royal .r-sec-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #4a2c6e; margin-bottom: 9px; margin-top: 1rem;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .preset-royal .r-sec-label::after { content: ''; flex: 1; height: 1px; background: #c8a96a55; }
+  .preset-royal .r-summary { font-size: 0.92rem; line-height: 1.75; color: #3a2e4a; font-style: italic; }
+  .preset-royal .r-exp-item { margin-bottom: 0.9rem; }
+  .preset-royal .r-exp-role { font-size: 0.98rem; font-weight: 700; color: #2e1a47; }
+  .preset-royal .r-exp-co { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: #c8a96a; font-weight: 600; }
+  .preset-royal .r-exp-date { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; color: #9ca3af; margin-bottom: 2px; }
+  .preset-royal .r-exp-desc { font-size: 0.86rem; line-height: 1.65; color: #4b5563; }
+  .preset-royal .r-lang-item { font-family: 'DM Sans', sans-serif; display: flex; justify-content: space-between; font-size: 0.78rem; color: #3a2e4a; margin-bottom: 4px; }
+  .preset-royal .r-lang-level { font-family: 'DM Sans', sans-serif; font-size: 0.68rem; background: #4a2c6e22; color: #4a2c6e; padding: 1px 7px; border-radius: 10px; }
+  .preset-royal .skill-tag-royal {
+    display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+    padding: 3px 11px; background: #4a2c6e; color: #f0d9a8; border-radius: 2px;
+    margin: 2px 3px 0 0; letter-spacing: 0.04em;
+  }
+
+  /* ═══════════════════════════════════════
+     PRESET 14: ARCTIC (icy blue minimal)
+  ═══════════════════════════════════════ */
+  .preset-arctic .resume-paper {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #ffffff;
+    padding: 2.5rem;
+  }
+  .preset-arctic .r-header {
+    display: flex; align-items: center; gap: 1.5rem;
+    padding-bottom: 1.5rem; margin-bottom: 1.5rem;
+    border-bottom: 1px solid #d6e8f0;
+  }
+  .preset-arctic .r-photo {
+    width: 88px; height: 88px; border-radius: 50%;
+    object-fit: cover; border: 4px solid #eaf6fb; flex-shrink: 0;
+  }
+  .preset-arctic .r-photo-placeholder {
+    width: 88px; height: 88px; border-radius: 50%;
+    background: #eaf6fb; display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem; flex-shrink: 0; color: #7fb8d3;
+  }
+  .preset-arctic .r-name {
+    font-size: 1.9rem; font-weight: 300; letter-spacing: -0.01em; color: #1c3d4f;
+  }
+  .preset-arctic .r-title {
+    font-size: 0.82rem; color: #4fa3c4; font-weight: 500; margin-top: 5px;
+    letter-spacing: 0.06em;
+  }
+  .preset-arctic .r-contact-row {
+    display: flex; flex-wrap: wrap; gap: 4px 16px;
+    margin-top: 9px; font-size: 0.75rem; color: #6b8a96;
+  }
+  .preset-arctic .r-body { display: grid; grid-template-columns: 4fr 3fr; gap: 2rem; align-items: start; }
+  .preset-arctic .r-sec-label {
+    font-size: 0.66rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.18em; color: #4fa3c4; margin-bottom: 9px; margin-top: 1.2rem;
+    padding-bottom: 5px; border-bottom: 2px solid #eaf6fb;
+  }
+  .preset-arctic .r-summary { font-size: 0.83rem; line-height: 1.75; color: #374151; }
+  .preset-arctic .r-exp-item { margin-bottom: 0.9rem; }
+  .preset-arctic .r-exp-role { font-size: 0.88rem; font-weight: 600; color: #1c3d4f; }
+  .preset-arctic .r-exp-co { font-size: 0.78rem; color: #4fa3c4; }
+  .preset-arctic .r-exp-date { font-size: 0.72rem; color: #9ca3af; margin-bottom: 2px; }
+  .preset-arctic .r-exp-desc { font-size: 0.78rem; line-height: 1.6; color: #4b5563; }
+  .preset-arctic .r-lang-item { display: flex; justify-content: space-between; font-size: 0.78rem; color: #374151; margin-bottom: 4px; }
+  .preset-arctic .r-lang-level { font-size: 0.68rem; background: #eaf6fb; color: #4fa3c4; padding: 1px 7px; border-radius: 10px; }
+  .preset-arctic .skill-chip-arctic {
+    display: inline-block; font-size: 0.72rem; padding: 3px 10px;
+    background: #eaf6fb; color: #1c3d4f; border-radius: 14px;
+    margin: 2px 3px 0 0; border: 1px solid #d6e8f0;
+  }
+
+  /* ═══════════════════════════════════════
+     PRESET 15: CARBON (graphite / red industrial)
+  ═══════════════════════════════════════ */
+  .preset-carbon .resume-paper {
+    font-family: 'Syne', sans-serif;
+    background: #1c1c1c;
+    color: #d4d4d4;
+    padding: 2.25rem 2.5rem;
+  }
+  .preset-carbon .r-header {
+    display: flex; align-items: center; gap: 1.5rem;
+    padding-bottom: 1.5rem; margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e63946;
+  }
+  .preset-carbon .r-photo {
+    width: 85px; height: 85px; border-radius: 6px;
+    object-fit: cover; border: 2px solid #e63946; flex-shrink: 0;
+  }
+  .preset-carbon .r-photo-placeholder {
+    width: 85px; height: 85px; border-radius: 6px;
+    background: #2a2a2a; border: 2px solid #444;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem; flex-shrink: 0;
+  }
+  .preset-carbon .r-name {
+    font-size: 2.1rem; font-weight: 800; letter-spacing: -0.01em;
+    color: #fff; text-transform: uppercase; line-height: 1.05;
+  }
+  .preset-carbon .r-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem; color: #e63946; margin-top: 6px;
+    letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
+  }
+  .preset-carbon .r-contact-row {
+    font-family: 'DM Sans', sans-serif;
+    display: flex; flex-wrap: wrap; gap: 4px 14px;
+    margin-top: 9px; font-size: 0.72rem; color: #9a9a9a;
+  }
+  .preset-carbon .r-body { display: grid; grid-template-columns: 4fr 3fr; gap: 2rem; align-items: start; }
+  .preset-carbon .r-sec-label {
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #e63946; margin-bottom: 9px; margin-top: 1.1rem;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .preset-carbon .r-sec-label::after { content: ''; flex: 1; height: 1px; background: #3a3a3a; }
+  .preset-carbon .r-summary { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.75; color: #b8b8b8; }
+  .preset-carbon .r-exp-item { margin-bottom: 0.9rem; }
+  .preset-carbon .r-exp-role { font-size: 0.9rem; font-weight: 700; color: #fff; }
+  .preset-carbon .r-exp-co { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: #e63946; font-weight: 600; }
+  .preset-carbon .r-exp-date { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; color: #777; margin-bottom: 2px; }
+  .preset-carbon .r-exp-desc { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; line-height: 1.6; color: #aaa; }
+  .preset-carbon .r-lang-item { font-family: 'DM Sans', sans-serif; display: flex; justify-content: space-between; font-size: 0.78rem; color: #ccc; margin-bottom: 4px; }
+  .preset-carbon .r-lang-level { font-size: 0.68rem; background: #e6394622; color: #e63946; padding: 1px 7px; border-radius: 10px; }
+  .preset-carbon .skill-tag-carbon {
+    display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem;
+    padding: 3px 10px; background: #2a2a2a; color: #e63946; border: 1px solid #e6394644;
+    border-radius: 2px; margin: 2px 3px 0 0;
+  }
+
+  /* ═══════════════════════════════════════
+     PRESET 16: BLOSSOM (soft pink / floral)
+  ═══════════════════════════════════════ */
+  .preset-blossom .resume-paper {
+    font-family: 'DM Sans', sans-serif;
+    background: #fffaf9;
+  }
+  .preset-blossom .r-header {
+    text-align: center;
+    padding: 2.25rem 2.5rem 1.5rem;
+    display: flex; flex-direction: column; align-items: center;
+    background: linear-gradient(180deg, #ffe4ec, #fffaf9);
+  }
+  .preset-blossom .r-photo {
+    width: 92px; height: 92px; border-radius: 50%;
+    object-fit: cover; border: 4px solid #ffffff;
+    box-shadow: 0 2px 12px rgba(244,114,182,0.25);
+    margin-bottom: 0.6rem;
+  }
+  .preset-blossom .r-photo-placeholder {
+    width: 92px; height: 92px; border-radius: 50%;
+    background: #ffe4ec; display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem; margin-bottom: 0.6rem; color: #f472b6;
+  }
+  .preset-blossom .r-name {
+    font-size: 2.1rem; font-weight: 600; color: #4a3540; letter-spacing: -0.01em; line-height: 1.1;
+  }
+  .preset-blossom .r-title {
+    font-size: 0.8rem; color: #f472b6; font-weight: 500; margin-top: 5px; letter-spacing: 0.06em;
+  }
+  .preset-blossom .r-contact-row {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px;
+    margin-top: 9px; font-size: 0.74rem; color: #9a8086;
+  }
+  .preset-blossom .r-body { display: grid; grid-template-columns: 4fr 3fr; gap: 1.75rem; padding: 0.5rem 2.5rem 2rem; align-items: start; }
+  .preset-blossom .r-sec-label {
+    font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.18em; color: #f472b6; margin-bottom: 9px; margin-top: 1.1rem;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .preset-blossom .r-sec-label::before { content: '✿'; font-size: 0.8rem; }
+  .preset-blossom .r-sec-label::after { content: ''; flex: 1; height: 1px; background: #ffe4ec; }
+  .preset-blossom .r-summary { font-size: 0.83rem; line-height: 1.75; color: #5c4a50; }
+  .preset-blossom .r-exp-item { margin-bottom: 0.9rem; }
+  .preset-blossom .r-exp-role { font-size: 0.88rem; font-weight: 700; color: #4a3540; }
+  .preset-blossom .r-exp-co { font-size: 0.78rem; color: #f472b6; font-weight: 500; }
+  .preset-blossom .r-exp-date { font-size: 0.72rem; color: #c0a8ae; margin-bottom: 2px; }
+  .preset-blossom .r-exp-desc { font-size: 0.78rem; line-height: 1.6; color: #6b5b60; }
+  .preset-blossom .r-lang-item { display: flex; justify-content: space-between; font-size: 0.78rem; color: #5c4a50; margin-bottom: 4px; }
+  .preset-blossom .r-lang-level { font-size: 0.68rem; background: #ffe4ec; color: #f472b6; padding: 1px 7px; border-radius: 10px; }
+  .preset-blossom .skill-pill-blossom {
+    display: inline-block; font-size: 0.72rem; padding: 3px 11px;
+    background: #ffe4ec; color: #d6488a; border-radius: 20px;
+    margin: 2px 3px 0 0;
+  }
+
+
+  /* ── CHAT BUBBLE ── */
+  #chat-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9000;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c8602a, #e8a87c);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(200,96,42,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: white;
+  }
+  #chat-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(200,96,42,0.55); }
+  #chat-fab svg { width: 24px; height: 24px; }
+  #chat-fab .fab-badge {
+    position: absolute;
+    top: -3px; right: -3px;
+    width: 18px; height: 18px;
+    background: #5b8a72;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid white;
+    animation: badgePop 0.3s ease;
+  }
+  @keyframes badgePop { from { transform: scale(0); } to { transform: scale(1); } }
+
+  #chat-panel {
+    position: fixed;
+    bottom: 96px;
+    right: 28px;
+    z-index: 9001;
+    width: 340px;
+    max-height: 500px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.92) translateY(16px);
+    transform-origin: bottom right;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.18s ease;
+  }
+  #chat-panel.open {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .chat-header {
+    background: var(--ink);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .chat-header-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c8602a, #e8a87c);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .chat-header-info { flex: 1; }
+  .chat-header-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; color: white; }
+  .chat-header-status { font-size: 0.7rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+  .chat-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #5b8a72; display: inline-block; }
+  .chat-close-btn { background: none; border: none; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 1.1rem; padding: 4px; line-height: 1; }
+  .chat-close-btn:hover { color: white; }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--light);
+    min-height: 180px;
+    max-height: 280px;
+  }
+  .chat-msg {
+    max-width: 85%;
+    padding: 9px 13px;
+    border-radius: 14px;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    animation: msgIn 0.2s ease;
+  }
+  @keyframes msgIn { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform: translateY(0); } }
+  .chat-msg.bot {
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+  }
+  .chat-msg.user {
+    background: var(--ink);
+    color: white;
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+  }
+  .chat-msg.bot strong { color: var(--accent); }
+
+  .chat-suggestions {
+    padding: 8px 14px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--light);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .chat-suggestions-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .chat-suggestion-btn {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 13px;
+    font-size: 0.77rem;
+    color: var(--ink);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .chat-suggestion-btn:hover { border-color: var(--accent); color: var(--accent); background: #fff8f5; }
+
+  .chat-input-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 14px;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    flex-shrink: 0;
+  }
+  .chat-input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink);
+    background: var(--light);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .chat-input:focus { border-color: var(--accent); background: white; }
+  .chat-send-btn {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .chat-send-btn:hover { background: #b5521f; }
+  .chat-send-btn svg { width: 15px; height: 15px; }
+
+  .chat-typing { display: flex; gap: 4px; align-items: center; padding: 4px 0; }
+  .chat-typing span {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--muted);
+    animation: typingBounce 1.2s ease infinite;
+  }
+  .chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typingBounce {
+    0%,60%,100% { transform: translateY(0); opacity:0.4; }
+    30% { transform: translateY(-5px); opacity:1; }
+  }
+  body.dark-mode .chat-msg.bot { color: #f0ede6; }
+  body.dark-mode .chat-suggestion-btn { color: #f0ede6; }
+  @media (max-width: 500px) {
+    #chat-panel { width: calc(100vw - 24px); right: 12px; bottom: 84px; }
+    #chat-fab { right: 16px; bottom: 16px; }
+  }
+
+  /* ── EASTER EGG ── */
+  #egg-overlay {
+    position: fixed; inset: 0; z-index: 99999;
+    background: #0d0d1a;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1.5rem;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  #egg-overlay.egg-active { opacity: 1; pointer-events: all; }
+  .egg-stars {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  }
+  .egg-star {
+    position: absolute;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    animation: starTwinkle var(--dur, 2s) ease-in-out var(--delay, 0s) infinite;
+  }
+  @keyframes starTwinkle {
+    0%,100% { opacity:0; transform: scale(0.5); }
+    50% { opacity: var(--bright, 0.8); transform: scale(1.2); }
+  }
+  .egg-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: white;
+    text-align: center;
+    letter-spacing: -0.02em;
+    animation: eggFadeUp 0.5s ease 0.1s both;
+  }
+  .egg-title span { color: #e8a87c; }
+  .egg-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    animation: eggFadeUp 0.5s ease 0.25s both;
+  }
+  .egg-confetti-row {
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+    animation: eggFadeUp 0.5s ease 0.35s both;
+  }
+  .egg-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 7px 16px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.75);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .egg-secret-msg {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    max-width: 340px;
+    line-height: 1.7;
+    animation: eggFadeUp 0.5s ease 0.5s both;
+  }
+  .egg-secret-msg strong { color: #e8a87c; }
+  .egg-close {
+    margin-top: 0.5rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 28px;
+    color: rgba(255,255,255,0.6);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    animation: eggFadeUp 0.5s ease 0.6s both;
+  }
+  .egg-close:hover { background: rgba(255,255,255,0.12); color: white; }
+  .egg-konami-hint {
+    position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
+    background: rgba(26,26,46,0.92);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
+    z-index: 8999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .egg-konami-hint.show { opacity: 1; }
+  .egg-logo-ripple {
+    position: fixed;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(232,168,124,0.6);
+    pointer-events: none;
+    transform: scale(0);
+    animation: rippleOut 0.5s ease forwards;
+    z-index: 200;
+  }
+  @keyframes rippleOut {
+    to { transform: scale(18); opacity: 0; }
+  }
+  @keyframes eggFadeUp {
+    from { opacity:0; transform: translateY(16px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+  .egg-float {
+    font-size: 2.5rem;
+    animation: eggFloat 2.5s ease-in-out infinite;
+  }
+  @keyframes eggFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
 </style>
 </head>
 <body>
@@ -1628,9 +2196,31 @@
   </div>
 </div>
 
+<!-- ── EASTER EGG OVERLAY ── -->
+<div id="egg-overlay">
+  <div class="egg-stars" id="eggStars"></div>
+  <div class="egg-float">🥚</div>
+  <div class="egg-title">You found it<span>.</span></div>
+  <div class="egg-sub">Secret unlocked · You're officially curious</div>
+  <div class="egg-confetti-row">
+    <span class="egg-pill">🎨 12 templates</span>
+    <span class="egg-pill">🔒 100% private</span>
+    <span class="egg-pill">⚡ Zero servers</span>
+    <span class="egg-pill">✨ Made with care</span>
+  </div>
+  <div class="egg-secret-msg">
+    <strong>Pro tip:</strong> try the Konami code anywhere on the page<br>
+    ↑ ↑ ↓ ↓ ← → ← → B A<br><br>
+    or click the logo <strong>5 times</strong> fast — you already knew that.
+  </div>
+  <button class="egg-close" onclick="closeEgg()">Back to building ✦</button>
+</div>
+
+<div class="egg-konami-hint" id="konamiHint">↑ ↑ ↓ ↓ ← → ← → B A</div>
+
 <div class="topbar">
   <div class="topbar-left">
-    <a href="index.html" class="topbar-brand">Resumi<span>fy</span></a>
+    <a href="index.html" class="topbar-brand" id="topbar-brand-logo" onclick="eggLogoClick(event)">Resumi<span>fy</span></a>
     <div class="topbar-badge">100% client-side — nothing leaves your device</div>
   </div>
   <div class="topbar-actions">
@@ -1638,6 +2228,7 @@
       <svg id="builder-icon-moon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
       <svg id="builder-icon-sun" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
+    <button class="btn btn-outline" onclick="fillRandomResume()" title="Fill with sample data" style="background:rgba(232,168,124,0.15);border-color:rgba(232,168,124,0.5);color:#e8a87c;">✨ Try Sample</button>
     <button class="btn btn-outline" onclick="window.print()">🖨 Download</button>
    
   </div>
@@ -1847,7 +2438,11 @@
           <div class="preset-name">Mono</div>
           <div class="preset-desc">Terminal / tech</div>
         </div>
+      </div>
 
+      <button class="add-btn" id="presetsMoreBtn" onclick="toggleMorePresets()" style="margin-top:10px;">Show 10 more templates ▾</button>
+
+      <div class="presets-grid" id="presetsGridMore" style="grid-template-columns:1fr 1fr; display:none; margin-top:10px;">
         <div class="preset-card" onclick="selectPreset('coral')" id="p-coral">
           <div class="preset-thumb" style="background:#fff5f5;padding:0;overflow:hidden;display:flex;flex-direction:column;">
             <div style="background:linear-gradient(135deg,#e85d7a,#f4a261);padding:8px;">
@@ -1941,6 +2536,78 @@
           </div>
           <div class="preset-name">Paper</div>
           <div class="preset-desc">Vintage newspaper</div>
+        </div>
+
+        <!-- Row 4: new styles -->
+        <div class="preset-card" onclick="selectPreset('royal')" id="p-royal">
+          <div class="preset-thumb" style="background:#fdfcfb;padding:0;overflow:hidden;display:flex;flex-direction:column;">
+            <div style="background:linear-gradient(135deg,#2e1a47,#4a2c6e);padding:7px;display:flex;align-items:center;gap:5px;position:relative;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.15);border:2px solid #c8a96a;flex-shrink:0;"></div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:2px;">
+                <div class="tl" style="background:rgba(255,255,255,0.9);width:60%;height:4px;"></div>
+                <div class="tl" style="background:#c8a96a;width:40%;height:2px;"></div>
+              </div>
+              <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c8a96a,#f0d9a8,#c8a96a);"></div>
+            </div>
+            <div style="flex:1;padding:6px;display:flex;flex-direction:column;gap:3px;">
+              <div class="tl" style="background:#4a2c6e;width:50%;height:2px;"></div>
+              <div class="tl" style="background:#eee;width:90%;"></div>
+              <div class="tl" style="background:#eee;width:70%;"></div>
+            </div>
+          </div>
+          <div class="preset-name">Royal</div>
+          <div class="preset-desc">Purple & gold</div>
+        </div>
+
+        <div class="preset-card" onclick="selectPreset('arctic')" id="p-arctic">
+          <div class="preset-thumb" style="background:#fff;padding:8px;">
+            <div style="display:flex;align-items:center;gap:5px;margin-bottom:5px;">
+              <div style="width:22px;height:22px;border-radius:50%;background:#eaf6fb;flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <div class="tl" style="background:#1c3d4f;width:55%;height:4px;margin-bottom:2px;"></div>
+                <div class="tl" style="background:#4fa3c4;width:40%;height:2px;"></div>
+              </div>
+            </div>
+            <div class="tl" style="background:#eaf6fb;width:100%;height:2px;margin-bottom:5px;"></div>
+            <div class="tl" style="background:#ddd;width:90%;margin-bottom:2px;"></div>
+            <div class="tl" style="background:#ddd;width:70%;"></div>
+          </div>
+          <div class="preset-name">Arctic</div>
+          <div class="preset-desc">Icy blue minimal</div>
+        </div>
+
+        <div class="preset-card" onclick="selectPreset('carbon')" id="p-carbon">
+          <div class="preset-thumb" style="background:#1c1c1c;padding:8px;">
+            <div style="display:flex;align-items:center;gap:5px;margin-bottom:5px;">
+              <div style="width:20px;height:20px;border-radius:4px;background:#2a2a2a;border:2px solid #e63946;flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <div class="tl" style="background:#fff;width:60%;height:5px;margin-bottom:2px;"></div>
+                <div class="tl" style="background:#e63946;width:40%;height:2px;"></div>
+              </div>
+            </div>
+            <div class="tl" style="background:#e63946;width:100%;height:2px;margin-bottom:5px;"></div>
+            <div class="tl" style="background:#3a3a3a;width:90%;margin-bottom:2px;"></div>
+            <div class="tl" style="background:#3a3a3a;width:70%;"></div>
+          </div>
+          <div class="preset-name">Carbon</div>
+          <div class="preset-desc">Graphite & red</div>
+        </div>
+
+        <div class="preset-card" onclick="selectPreset('blossom')" id="p-blossom">
+          <div class="preset-thumb" style="background:#fffaf9;padding:0;overflow:hidden;display:flex;flex-direction:column;">
+            <div style="background:linear-gradient(180deg,#ffe4ec,#fffaf9);padding:7px;text-align:center;">
+              <div style="width:18px;height:18px;border-radius:50%;background:#fff;margin:0 auto 3px;box-shadow:0 1px 4px rgba(244,114,182,0.3);"></div>
+              <div class="tl" style="background:#4a3540;width:55%;height:4px;margin:0 auto 2px;"></div>
+              <div class="tl" style="background:#f472b6;width:35%;height:2px;margin:0 auto;"></div>
+            </div>
+            <div style="flex:1;padding:6px;display:flex;flex-direction:column;gap:3px;">
+              <div class="tl" style="background:#f472b6;width:50%;height:2px;"></div>
+              <div class="tl" style="background:#eee;width:90%;"></div>
+              <div class="tl" style="background:#eee;width:70%;"></div>
+            </div>
+          </div>
+          <div class="preset-name">Blossom</div>
+          <div class="preset-desc">Soft pink floral</div>
         </div>
       </div>
     </div>
@@ -2163,6 +2830,15 @@ function selectPreset(name) {
   renderResume();
 }
 
+// ── Show more presets ──
+function toggleMorePresets() {
+  const more = document.getElementById('presetsGridMore');
+  const btn = document.getElementById('presetsMoreBtn');
+  const isHidden = more.style.display === 'none';
+  more.style.display = isHidden ? 'grid' : 'none';
+  btn.textContent = isHidden ? 'Show fewer templates ▴' : 'Show 10 more templates ▾';
+}
+
 // ── Render ──
 function renderResume() {
   const wrapper = document.getElementById('resumeWrapper');
@@ -2194,6 +2870,10 @@ function renderResume() {
   else if (state.preset === 'forest')   renderForest(paper, photoHTML, contactItems, safeText);
   else if (state.preset === 'sunset')   renderSunset(paper, photoHTML, contactItems, safeText);
   else if (state.preset === 'paper')    renderPaper(paper, photoHTML, contactItems, safeText);
+  else if (state.preset === 'royal')    renderRoyal(paper, photoHTML, contactItems, safeText);
+  else if (state.preset === 'arctic')   renderArctic(paper, photoHTML, contactItems, safeText);
+  else if (state.preset === 'carbon')   renderCarbon(paper, photoHTML, contactItems, safeText);
+  else if (state.preset === 'blossom')  renderBlossom(paper, photoHTML, contactItems, safeText);
 
   updatePreviewScale();
 }
@@ -2651,6 +3331,112 @@ function renderPaper(paper, photo, contacts, s) {
     </div>`;
 }
 
+// ── ROYAL ──
+function renderRoyal(paper, photo, contacts, s) {
+  paper.innerHTML = `
+    <div class="r-header">
+      ${photo}
+      <div>
+        <div class="r-name">${s(state.name)||'Your Name'}</div>
+        <div class="r-title">${s(state.title)||'Job Title'}</div>
+        <div class="r-contact-row">${contacts.join('')}</div>
+      </div>
+    </div>
+    <div class="r-body">
+      <div>
+        ${state.summary ? `<div class="r-sec-label">Profile</div><div class="r-summary">${s(state.summary)}</div>` : ''}
+        ${state.experience.length ? `<div class="r-sec-label">Experience</div>${expItems(state)}` : ''}
+        ${state.projects.length   ? `<div class="r-sec-label">Projects</div>${projItems(state)}` : ''}
+      </div>
+      <div>
+        ${state.skills.length ? `<div class="r-sec-label">Skills</div>${state.skills.map(sk=>`<span class="skill-tag-royal">${sk}</span>`).join('')}` : ''}
+        ${state.education.length      ? `<div class="r-sec-label">Education</div>${eduItems(state)}` : ''}
+        ${state.certifications.length ? `<div class="r-sec-label">Certifications</div>${certItems(state)}` : ''}
+        ${state.languages.length      ? `<div class="r-sec-label">Languages</div>${langItems(state)}` : ''}
+        ${state.volunteer.length      ? `<div class="r-sec-label">Awards</div>${volItems(state)}` : ''}
+      </div>
+    </div>`;
+}
+
+// ── ARCTIC ──
+function renderArctic(paper, photo, contacts, s) {
+  paper.innerHTML = `
+    <div class="r-header">
+      ${photo}
+      <div>
+        <div class="r-name">${s(state.name)||'Your Name'}</div>
+        <div class="r-title">${s(state.title)||'Job Title'}</div>
+        <div class="r-contact-row">${contacts.join('')}</div>
+      </div>
+    </div>
+    ${state.summary ? `<div style="margin-bottom:0.5rem"><div class="r-sec-label">Profile</div><div class="r-summary">${s(state.summary)}</div></div>` : ''}
+    <div class="r-body">
+      <div>
+        ${state.experience.length ? `<div class="r-sec-label">Experience</div>${expItems(state)}` : ''}
+        ${state.projects.length   ? `<div class="r-sec-label">Projects</div>${projItems(state)}` : ''}
+      </div>
+      <div>
+        ${state.skills.length ? `<div class="r-sec-label">Skills</div>${state.skills.map(sk=>`<span class="skill-chip-arctic">${sk}</span>`).join('')}` : ''}
+        ${state.education.length      ? `<div class="r-sec-label">Education</div>${eduItems(state)}` : ''}
+        ${state.certifications.length ? `<div class="r-sec-label">Certifications</div>${certItems(state)}` : ''}
+        ${state.languages.length      ? `<div class="r-sec-label">Languages</div>${langItems(state)}` : ''}
+        ${state.volunteer.length      ? `<div class="r-sec-label">Awards</div>${volItems(state)}` : ''}
+      </div>
+    </div>`;
+}
+
+// ── CARBON ──
+function renderCarbon(paper, photo, contacts, s) {
+  paper.innerHTML = `
+    <div class="r-header">
+      ${photo}
+      <div>
+        <div class="r-name">${s(state.name)||'Your Name'}</div>
+        <div class="r-title">${s(state.title)||'Job Title'}</div>
+        <div class="r-contact-row">${contacts.join('')}</div>
+      </div>
+    </div>
+    <div class="r-body">
+      <div>
+        ${state.summary ? `<div class="r-sec-label">Profile</div><div class="r-summary">${s(state.summary)}</div>` : ''}
+        ${state.experience.length ? `<div class="r-sec-label">Experience</div>${expItems(state)}` : ''}
+        ${state.projects.length   ? `<div class="r-sec-label">Projects</div>${projItems(state)}` : ''}
+      </div>
+      <div>
+        ${state.skills.length ? `<div class="r-sec-label">Skills</div>${state.skills.map(sk=>`<span class="skill-tag-carbon">${sk}</span>`).join('')}` : ''}
+        ${state.education.length      ? `<div class="r-sec-label">Education</div>${eduItems(state)}` : ''}
+        ${state.certifications.length ? `<div class="r-sec-label">Certifications</div>${certItems(state)}` : ''}
+        ${state.languages.length      ? `<div class="r-sec-label">Languages</div>${langItems(state)}` : ''}
+        ${state.volunteer.length      ? `<div class="r-sec-label">Awards</div>${volItems(state)}` : ''}
+      </div>
+    </div>`;
+}
+
+// ── BLOSSOM ──
+function renderBlossom(paper, photo, contacts, s) {
+  paper.innerHTML = `
+    <div class="r-header">
+      ${photo}
+      <div class="r-name">${s(state.name)||'Your Name'}</div>
+      <div class="r-title">${s(state.title)||'Job Title'}</div>
+      <div class="r-contact-row">${contacts.join('')}</div>
+    </div>
+    ${state.summary ? `<div style="margin:0 2.5rem 0.5rem;font-size:0.83rem;line-height:1.75;color:#5c4a50;text-align:center;">${s(state.summary)}</div>` : ''}
+    <div class="r-body">
+      <div>
+        ${state.experience.length ? `<div class="r-sec-label">Experience</div>${expItems(state)}` : ''}
+        ${state.projects.length   ? `<div class="r-sec-label">Projects</div>${projItems(state)}` : ''}
+      </div>
+      <div>
+        ${state.skills.length ? `<div class="r-sec-label">Skills</div>${state.skills.map(sk=>`<span class="skill-pill-blossom">${sk}</span>`).join('')}` : ''}
+        ${state.education.length      ? `<div class="r-sec-label">Education</div>${eduItems(state)}` : ''}
+        ${state.certifications.length ? `<div class="r-sec-label">Certifications</div>${certItems(state)}` : ''}
+        ${state.languages.length      ? `<div class="r-sec-label">Languages</div>${langItems(state)}` : ''}
+        ${state.volunteer.length      ? `<div class="r-sec-label">Awards</div>${volItems(state)}` : ''}
+      </div>
+    </div>`;
+}
+
 function downloadResume() {
   alert('To save as PDF: use your browser\'s Print function (Ctrl/Cmd+P), then choose "Save as PDF" as the destination.');
 }
@@ -2684,7 +3470,337 @@ renderResume();
 initTheme();
 window.addEventListener('load', updatePreviewScale);
 
-// ── Loader dismiss ──
+// ── RANDOM FILL ──
+const SAMPLE_DATA = [
+  {
+    name: 'Alexandra Chen', title: 'Senior Product Designer',
+    email: 'alex.chen@email.com', phone: '+1 (415) 882-3941',
+    location: 'San Francisco, CA', linkedin: 'linkedin.com/in/alexchen',
+    photo: 'p1.png',
+    summary: 'Creative product designer with 7+ years crafting intuitive digital experiences for Fortune 500 companies. Passionate about bridging user needs with business goals through data-driven design.',
+    skills: ['Figma', 'UX Research', 'Prototyping', 'Design Systems', 'Adobe XD', 'Webflow', 'CSS/HTML'],
+    experience: [
+      { role: 'Senior Product Designer', company: 'Dropbox', date: 'Mar 2021 – Present', desc: 'Led redesign of core file-sharing UX, increasing engagement by 34%. Managed a team of 3 designers and collaborated with 12 engineers across 4 squads.' },
+      { role: 'UX Designer', company: 'Airbnb', date: 'Jun 2018 – Feb 2021', desc: 'Designed end-to-end flows for host onboarding, reducing drop-off by 22%. Created and maintained the Airbnb Design System component library.' }
+    ],
+    education: [{ degree: 'B.F.A. Interaction Design', school: 'California College of the Arts', year: '2014 – 2018' }],
+    certifications: [{ name: 'Google UX Design Certificate', issuer: 'Google', year: '2022' }],
+    languages: [{ name: 'English', level: 'Native' }, { name: 'Mandarin', level: 'Fluent' }],
+    projects: [{ name: 'DesignKit OS', tech: 'Lead Designer · Figma, Storybook', desc: 'Open-source design system used by 400+ teams. 2.1k GitHub stars.' }],
+    volunteer: [{ title: 'Mentor, Women in Design', org: 'AIGA', year: '2023' }]
+  },
+  {
+    name: 'Marcus Johnson', title: 'Full-Stack Engineer',
+    email: 'm.johnson@dev.io', phone: '+44 7700 900456',
+    location: 'London, UK', linkedin: 'linkedin.com/in/marcusjdev',
+    photo: 'p2.png',
+    summary: 'Pragmatic full-stack engineer with deep expertise in TypeScript, React, and cloud infrastructure. Built products serving millions of users at scale.',
+    skills: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker', 'GraphQL'],
+    experience: [
+      { role: 'Staff Engineer', company: 'Monzo Bank', date: 'Jan 2022 – Present', desc: 'Architected microservices handling £2B+ in annual transactions. Mentored 8 junior engineers. Led migration from monolith to event-driven architecture.' },
+      { role: 'Senior Frontend Engineer', company: 'Deliveroo', date: 'May 2019 – Dec 2021', desc: 'Built real-time order tracking dashboard serving 500k daily active users. Reduced bundle size by 41% through code splitting.' }
+    ],
+    education: [{ degree: 'M.Sc. Computer Science', school: 'University of Edinburgh', year: '2015 – 2019' }],
+    certifications: [{ name: 'AWS Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023' }],
+    languages: [{ name: 'English', level: 'Native' }, { name: 'French', level: 'Intermediate' }],
+    projects: [{ name: 'QueryBench', tech: 'Creator · TypeScript, Bun', desc: 'CLI tool for benchmarking SQL queries. 3.5k downloads/month on npm.' }],
+    volunteer: [{ title: 'Best Open Source Project', org: 'NodeConf London', year: '2023' }]
+  },
+  {
+    name: 'Priya Sharma', title: 'Marketing Lead',
+    email: 'priya.sharma@brand.co', phone: '+91 98765 43210',
+    location: 'Bengaluru, India', linkedin: 'linkedin.com/in/priyasharmamarketing',
+    photo: 'p3.png',
+    summary: 'Results-driven marketing leader with 6 years growing B2B SaaS brands from early-stage to IPO. Expert in content-led growth and demand generation.',
+    skills: ['Growth Marketing', 'HubSpot', 'SEO/SEM', 'Copywriting', 'Data Analytics', 'Brand Strategy'],
+    experience: [
+      { role: 'Marketing Lead', company: 'Razorpay', date: 'Sep 2020 – Present', desc: 'Grew organic traffic 5× through content strategy. Managed ₹4Cr quarterly budget. Launched brand campaign reaching 18M impressions across channels.' },
+      { role: 'Digital Marketing Manager', company: 'Freshworks', date: 'Jul 2018 – Aug 2020', desc: 'Managed PPC campaigns with 4.2× ROAS. Built marketing automation workflows reducing lead response time by 65%.' }
+    ],
+    education: [{ degree: 'MBA – Marketing', school: 'IIM Bangalore', year: '2016 – 2018' }],
+    certifications: [{ name: 'Google Analytics 4 Certified', issuer: 'Google', year: '2023' }, { name: 'HubSpot Inbound Certified', issuer: 'HubSpot', year: '2022' }],
+    languages: [{ name: 'English', level: 'Fluent' }, { name: 'Hindi', level: 'Native' }, { name: 'Kannada', level: 'Basic' }],
+    projects: [{ name: 'ContentOS Playbook', tech: 'Author · Notion, Webflow', desc: 'B2B content strategy framework downloaded 12k+ times.' }],
+    volunteer: [{ title: 'Top 30 Under 30 – Marketing', org: 'Marketing Week India', year: '2022' }]
+  }
+];
+
+function fillRandomResume() {
+  const data = SAMPLE_DATA[Math.floor(Math.random() * SAMPLE_DATA.length)];
+
+  // Clear existing dynamic entries
+  ['exp','edu','cert','lang','proj','vol'].forEach(type => {
+    const mapId = {exp:'expContainer',edu:'eduContainer',cert:'certContainer',lang:'langContainer',proj:'projContainer',vol:'volContainer'};
+    const container = document.getElementById(mapId[type]);
+    if (container) container.innerHTML = '';
+  });
+  state.experience = []; state.education = []; state.certifications = [];
+  state.languages = []; state.projects = []; state.volunteer = [];
+  expCount = 0; eduCount = 0; certCount = 0; langCount = 0; projCount = 0; volCount = 0;
+
+  // Fill basic fields
+  const setField = (id, val) => { const el = document.getElementById(id); if (el) el.value = val || ''; };
+  setField('f-name',     data.name);
+  setField('f-title',    data.title);
+  setField('f-summary',  data.summary);
+  setField('f-email',    data.email);
+  setField('f-phone',    data.phone);
+  setField('f-location', data.location);
+  setField('f-linkedin', data.linkedin);
+
+  // Photo
+  if (data.photo) {
+    state.photo = data.photo;
+    const preview = document.getElementById('photoPreview');
+    const placeholder = document.getElementById('uploadPlaceholder');
+    if (preview) { preview.src = data.photo; preview.style.display = 'block'; }
+    if (placeholder) placeholder.style.display = 'none';
+  }
+
+  // Skills
+  state.skills = [...data.skills];
+  renderSkillTags();
+
+  // Experience entries
+  data.experience.forEach(exp => {
+    addEntry('exp');
+    const id = expCount - 1;
+    const card = document.getElementById(`exp-entry-${id}`);
+    if (card) {
+      const inputs = card.querySelectorAll('input');
+      if (inputs[0]) { inputs[0].value = exp.role; state.experience.find(e=>e.id===id).role = exp.role; }
+      if (inputs[1]) { inputs[1].value = exp.company; state.experience.find(e=>e.id===id).company = exp.company; }
+      if (inputs[2]) { inputs[2].value = exp.date; state.experience.find(e=>e.id===id).date = exp.date; }
+      const ta = card.querySelector('textarea'); if (ta) { ta.value = exp.desc; state.experience.find(e=>e.id===id).desc = exp.desc; }
+    }
+  });
+
+  // Education entries
+  data.education.forEach(edu => {
+    addEntry('edu');
+    const id = eduCount - 1;
+    const card = document.getElementById(`edu-entry-${id}`);
+    if (card) {
+      const inputs = card.querySelectorAll('input');
+      if (inputs[0]) { inputs[0].value = edu.degree; state.education.find(e=>e.id===id).degree = edu.degree; }
+      if (inputs[1]) { inputs[1].value = edu.school; state.education.find(e=>e.id===id).school = edu.school; }
+      if (inputs[2]) { inputs[2].value = edu.year; state.education.find(e=>e.id===id).year = edu.year; }
+    }
+  });
+
+  // Certs
+  data.certifications.forEach(cert => {
+    addEntry('cert');
+    const id = certCount - 1;
+    const card = document.getElementById(`cert-entry-${id}`);
+    if (card) {
+      const inputs = card.querySelectorAll('input');
+      if (inputs[0]) { inputs[0].value = cert.name; state.certifications.find(e=>e.id===id).name = cert.name; }
+      if (inputs[1]) { inputs[1].value = cert.issuer; state.certifications.find(e=>e.id===id).issuer = cert.issuer; }
+      if (inputs[2]) { inputs[2].value = cert.year; state.certifications.find(e=>e.id===id).year = cert.year; }
+    }
+  });
+
+  // Languages
+  data.languages.forEach(lang => {
+    addEntry('lang');
+    const id = langCount - 1;
+    const card = document.getElementById(`lang-entry-${id}`);
+    if (card) {
+      const inp = card.querySelector('input'); if (inp) { inp.value = lang.name; state.languages.find(e=>e.id===id).name = lang.name; }
+      const sel = card.querySelector('select'); if (sel) { sel.value = lang.level; state.languages.find(e=>e.id===id).level = lang.level; }
+    }
+  });
+
+  // Projects
+  data.projects.forEach(proj => {
+    addEntry('proj');
+    const id = projCount - 1;
+    const card = document.getElementById(`proj-entry-${id}`);
+    if (card) {
+      const inputs = card.querySelectorAll('input');
+      if (inputs[0]) { inputs[0].value = proj.name; state.projects.find(e=>e.id===id).name = proj.name; }
+      if (inputs[1]) { inputs[1].value = proj.tech; state.projects.find(e=>e.id===id).tech = proj.tech; }
+      const ta = card.querySelector('textarea'); if (ta) { ta.value = proj.desc; state.projects.find(e=>e.id===id).desc = proj.desc; }
+    }
+  });
+
+  // Volunteer / Awards
+  data.volunteer.forEach(vol => {
+    addEntry('vol');
+    const id = volCount - 1;
+    const card = document.getElementById(`vol-entry-${id}`);
+    if (card) {
+      const inputs = card.querySelectorAll('input');
+      if (inputs[0]) { inputs[0].value = vol.title; state.volunteer.find(e=>e.id===id).title = vol.title; }
+      if (inputs[1]) { inputs[1].value = vol.org; state.volunteer.find(e=>e.id===id).org = vol.org; }
+      if (inputs[2]) { inputs[2].value = vol.year; state.volunteer.find(e=>e.id===id).year = vol.year; }
+    }
+  });
+
+  update();
+
+  // Switch to Details tab so user sees the filled data
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sidebar-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-details').classList.add('active');
+  document.querySelector('.sidebar-tab:nth-child(2)').classList.add('active');
+
+  // Flash the sample button
+  const btn = document.querySelector('[onclick="fillRandomResume()"]');
+  if (btn) {
+    btn.textContent = '✅ Filled!';
+    setTimeout(() => { btn.innerHTML = '✨ Try Sample'; }, 1800);
+  }
+}
+
+// ── CHAT ──
+let chatOpen = false;
+
+const CHAT_QA = {
+  'how do i download my resume as a pdf?': {
+    answer: `To save your resume as a <strong>PDF</strong>:<br><br>
+1. Click the <strong>🖨 Download</strong> button in the top bar<br>
+2. Your browser's print dialog will open<br>
+3. Set <em>Destination</em> to <strong>Save as PDF</strong><br>
+4. Click Save — done! 🎉`
+  },
+  'which template should i choose?': {
+    answer: `Great question! Here's a quick guide:<br><br>
+• <strong>Executive</strong> — Corporate / senior roles<br>
+• <strong>Minimal</strong> — Clean, works everywhere<br>
+• <strong>Creative</strong> — Design & media jobs<br>
+• <strong>Elegant</strong> — Law, finance, academia<br>
+• <strong>Mono</strong> — Engineering / tech roles<br>
+• <strong>Nordic</strong> — Startups & modern orgs<br><br>
+Go to the <em>Design</em> tab to preview them all!`
+  },
+  'how do i write a good summary?': {
+    answer: `A great summary has 3 parts:<br><br>
+1. <strong>Who you are</strong> — your title & years of experience<br>
+2. <strong>What you do best</strong> — your core skill or specialty<br>
+3. <strong>What you bring</strong> — a key outcome or achievement<br><br>
+<em>Example:</em> "Full-stack engineer with 5 years building fintech products. Specialises in React & Node.js. Shipped features used by 2M+ users."<br><br>
+Keep it to 2-3 sentences max!`
+  },
+  'can i add my photo to the resume?': {
+    answer: `Yes! Here's how:<br><br>
+1. Go to the <strong>Details</strong> tab<br>
+2. Click the photo upload area at the top<br>
+3. Select a JPEG or PNG of your face<br><br>
+Your photo will appear on all templates that include a profile picture. Square or circular crops work best! 📸`
+  },
+  'fill the resume with sample data for me': {
+    answer: `Sure thing! I'll fill in sample data right now… ✨`,
+    action: () => { setTimeout(fillRandomResume, 400); }
+  },
+  'how do i add skills?': {
+    answer: `In the <strong>Details</strong> tab, scroll to the <em>Skills</em> section. Type a skill in the input box and press <strong>Enter</strong> or click <em>Add</em>. Each skill will appear as a tag. Click × on any tag to remove it.`
+  },
+  'can i change fonts or colors?': {
+    answer: `Font and colour themes are baked into each template right now. To change the visual style, pick a different template from the <strong>Design</strong> tab — each one has its own unique typography and palette!`
+  },
+  'is my data safe?': {
+    answer: `Absolutely! Resumify is <strong>100% client-side</strong>. Everything you type stays in your browser and is never sent to any server. The privacy note at the bottom of the sidebar confirms this. 🔒`
+  }
+};
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const panel = document.getElementById('chat-panel');
+  const iconOpen = document.getElementById('chat-icon-open');
+  const iconClose = document.getElementById('chat-icon-close');
+  panel.classList.toggle('open', chatOpen);
+  iconOpen.style.display = chatOpen ? 'none' : 'block';
+  iconClose.style.display = chatOpen ? 'block' : 'none';
+  const badge = document.querySelector('#chat-fab .fab-badge');
+  if (badge) badge.remove();
+  if (chatOpen) setTimeout(() => document.getElementById('chatInput').focus(), 250);
+}
+
+function addChatMsg(text, role) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `chat-msg ${role}`;
+  div.innerHTML = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg bot';
+  div.id = 'chat-typing-indicator';
+  div.innerHTML = `<div class="chat-typing"><span></span><span></span><span></span></div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function hideTyping() {
+  document.getElementById('chat-typing-indicator')?.remove();
+}
+
+function askQuestion(q) {
+  sendChatMsg(q);
+}
+
+function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const q = inp.value.trim();
+  if (!q) return;
+  inp.value = '';
+  sendChatMsg(q);
+}
+
+function sendChatMsg(q) {
+  addChatMsg(q, 'user');
+  showTyping();
+
+  const key = q.toLowerCase().trim().replace(/[?!.]+$/, '').trim() + '?';
+  const normalized = q.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+
+  // Try to find a matching answer
+  let match = null;
+  const qaKeys = Object.keys(CHAT_QA);
+  for (const k of qaKeys) {
+    const kNorm = k.replace(/[^a-z0-9 ]/g, '').trim();
+    if (normalized === kNorm || normalized.includes(kNorm.replace(/\?/g,'').trim()) || kNorm.includes(normalized)) {
+      match = CHAT_QA[k]; break;
+    }
+  }
+
+  // Keyword fallback
+  if (!match) {
+    if (/pdf|download|print|save/.test(normalized)) match = CHAT_QA['how do i download my resume as a pdf?'];
+    else if (/template|theme|design|preset|style/.test(normalized)) match = CHAT_QA['which template should i choose?'];
+    else if (/summary|about|bio|profile/.test(normalized)) match = CHAT_QA['how do i write a good summary?'];
+    else if (/photo|picture|image|avatar/.test(normalized)) match = CHAT_QA['can i add my photo to the resume?'];
+    else if (/sample|random|fill|demo|example|test/.test(normalized)) match = CHAT_QA['fill the resume with sample data for me'];
+    else if (/skill/.test(normalized)) match = CHAT_QA['how do i add skills?'];
+    else if (/font|color|colour|colour/.test(normalized)) match = CHAT_QA['can i change fonts or colors?'];
+    else if (/safe|privacy|secure|data/.test(normalized)) match = CHAT_QA['is my data safe?'];
+  }
+
+  setTimeout(() => {
+    hideTyping();
+    if (match) {
+      addChatMsg(match.answer, 'bot');
+      if (match.action) match.action();
+    } else {
+      addChatMsg(`I don't have a specific answer for that, but here are some things I can help with:<br><br>
+• Downloading as PDF<br>
+• Choosing the right template<br>
+• Writing your summary<br>
+• Adding a photo or skills<br>
+• Filling with sample data<br><br>
+Try rephrasing your question! 🙂`, 'bot');
+    }
+  }, 750);
+}
+
+
 (function() {
   const loader = document.getElementById('resumify-loader');
   if (!loader) return;
@@ -2696,6 +3812,164 @@ window.addEventListener('load', updatePreviewScale);
   }, 2000);
 })();
 
+// ── EASTER EGG ──
+
+// --- Konami Code ---
+const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+let konamiProgress = 0;
+let konamiHintTimer = null;
+
+document.addEventListener('keydown', e => {
+  if (e.key === KONAMI[konamiProgress]) {
+    konamiProgress++;
+    // Show hint after 3 correct keys
+    if (konamiProgress >= 3) {
+      const hint = document.getElementById('konamiHint');
+      hint.classList.add('show');
+      clearTimeout(konamiHintTimer);
+      konamiHintTimer = setTimeout(() => hint.classList.remove('show'), 2000);
+    }
+    if (konamiProgress === KONAMI.length) {
+      konamiProgress = 0;
+      document.getElementById('konamiHint').classList.remove('show');
+      openEgg('konami');
+    }
+  } else {
+    konamiProgress = 0;
+  }
+});
+
+// --- Logo click (5×) ---
+let logoClickCount = 0;
+let logoClickTimer = null;
+
+function eggLogoClick(e) {
+  e.preventDefault();
+  logoClickCount++;
+  // ripple effect on each click
+  const ripple = document.createElement('div');
+  ripple.className = 'egg-logo-ripple';
+  const rect = e.target.getBoundingClientRect();
+  ripple.style.left = (rect.left + rect.width/2 - 5) + 'px';
+  ripple.style.top  = (rect.top  + rect.height/2 - 5) + 'px';
+  ripple.style.position = 'fixed';
+  document.body.appendChild(ripple);
+  ripple.addEventListener('animationend', () => ripple.remove());
+
+  clearTimeout(logoClickTimer);
+  if (logoClickCount >= 5) {
+    logoClickCount = 0;
+    openEgg('logo');
+  } else {
+    logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 1800);
+  }
+}
+
+// --- Chat trigger ---
+// Also detectable via chat: typing "egg", "easter egg", "secret"
+const _origSendChatMsg = sendChatMsg;
+function sendChatMsg(q) {
+  if (/\b(egg|easter.?egg|secret|konami|cheat)\b/i.test(q)) {
+    addChatMsg(q, 'user');
+    showTyping();
+    setTimeout(() => {
+      hideTyping();
+      addChatMsg(`Ooh, you're sneaky 👀<br><br>There's a secret hidden in this app. Try clicking the <strong>logo</strong> in the top-left 5 times fast… or use the classic <em>Konami code</em> ↑↑↓↓←→←→BA 🎮`, 'bot');
+    }, 700);
+    return;
+  }
+  _origSendChatMsg(q);
+}
+
+// --- Open / close ---
+function openEgg(source) {
+  // Build starfield
+  const starsEl = document.getElementById('eggStars');
+  starsEl.innerHTML = '';
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'egg-star';
+    s.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      --dur:${1.5+Math.random()*3}s;
+      --delay:${Math.random()*3}s;
+      --bright:${0.3+Math.random()*0.7};
+      width:${Math.random()<0.2?3:2}px;
+      height:${Math.random()<0.2?3:2}px;
+    `;
+    starsEl.appendChild(s);
+  }
+
+  // Update message for Konami vs logo
+  const msg = document.querySelector('.egg-secret-msg');
+  if (source === 'konami') {
+    msg.innerHTML = `↑ ↑ ↓ ↓ ← → ← → B A<br><br>You actually did it. Legend. 🕹️<br><br>You can also click the logo <strong>5×</strong> fast.`;
+  } else {
+    msg.innerHTML = `5 clicks. You really went for it. 🏅<br><br><strong>Pro tip:</strong> try the Konami code too —<br>↑ ↑ ↓ ↓ ← → ← → B A`;
+  }
+
+  document.getElementById('egg-overlay').classList.add('egg-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeEgg() {
+  document.getElementById('egg-overlay').classList.remove('egg-active');
+  document.body.style.overflow = '';
+}
+
+// Close on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeEgg();
+});
+
+
 </script>
+<!-- ── CHAT BUBBLE ── -->
+<button id="chat-fab" onclick="toggleChat()" title="Ask Resumify Assistant">
+  <svg id="chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <svg id="chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="display:none">
+    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+</button>
+
+<div id="chat-panel">
+  <div class="chat-header">
+    <div class="chat-header-avatar">✦</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Resumify Assistant</div>
+      <div class="chat-header-status"><span class="chat-status-dot"></span>Here to help</div>
+    </div>
+    <button class="chat-close-btn" onclick="toggleChat()">✕</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      👋 Hi! I'm your <strong>Resumify assistant</strong>.<br><br>
+      Ask me anything about building your resume, or pick a question below to get started!
+    </div>
+  </div>
+
+  <div class="chat-suggestions" id="chatSuggestions">
+    <div class="chat-suggestions-label">Quick questions</div>
+    <button class="chat-suggestion-btn" onclick="askQuestion('How do I download my resume as a PDF?')">📥 How do I download as PDF?</button>
+    <button class="chat-suggestion-btn" onclick="askQuestion('Which template should I choose?')">🎨 Which template should I use?</button>
+    <button class="chat-suggestion-btn" onclick="askQuestion('How do I write a good summary?')">✍️ How to write a good summary?</button>
+    <button class="chat-suggestion-btn" onclick="askQuestion('Can I add my photo to the resume?')">📷 Can I add my photo?</button>
+    <button class="chat-suggestion-btn" onclick="askQuestion('Fill the resume with sample data for me')">✨ Fill with sample data</button>
+  </div>
+
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Ask something…" onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send-btn" onclick="sendChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
 </body>
 </html>
